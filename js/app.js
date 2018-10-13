@@ -33,7 +33,7 @@ var Player = function() {
 
     //set specific starting location for the player
     this.startX = this.step * 2;
-    this.startY = this.jump * 5;
+    this.startY = (this.jump * 5) - 20;
 
     //set initial location of the player
     this.x = this.startX;
