@@ -24,7 +24,7 @@ Enemy.prototype.render = function() {
 // define player class
 var Player = function() {
     
-    //set initial location of theplayer
+    //set initial location of the player
     this.x = 0;
     this.y = 0;
 
@@ -35,7 +35,7 @@ var Player = function() {
 // update method
 Player.prototype.update = function() {
 
-};
+}
 
 // render method
 Player.prototype.render = function() {
@@ -50,9 +50,10 @@ Player.prototype.handleInput = function() {
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
+const allEnemies = [];
+
 // Place the player object in a variable called player
-
-
+const player = new Player();
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
