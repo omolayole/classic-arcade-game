@@ -39,7 +39,7 @@ Player.prototype.update = function() {
 
 // render method
 Player.prototype.render = function() {
-
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
 // handleInput method
