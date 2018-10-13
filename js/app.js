@@ -23,14 +23,6 @@ Enemy.prototype.render = function() {
 
 // define player class
 var Player = function() {
-    
-    //set initial location of the player
-    this.x = this.startX;
-    this.y = this.startY;
-
-    //set specific starting location for the player
-    this.startX = this.step * 2;
-    this.startY = this.jump * 5;
 
     //set the image/sprite for the player
     this.sprite = 'images/char-boy.png';
@@ -38,6 +30,14 @@ var Player = function() {
     //set the step and jump property for the player
     this.step = 101;
     this.jump = 83;
+
+    //set specific starting location for the player
+    this.startX = this.step * 2;
+    this.startY = this.jump * 5;
+
+    //set initial location of the player
+    this.x = this.startX;
+    this.y = this.startY;
 };
 
 // update method
