@@ -30,6 +30,10 @@ var Player = function() {
 
     //set the image/sprite for the player
     this.sprite = 'images/char-boy.png';
+
+    //set the step and jump property for the player
+    this.step = 101;
+    this.jump = 83;
 };
 
 // update method
@@ -45,13 +49,13 @@ Player.prototype.render = function() {
 // handleInput method
 Player.prototype.handleInput = function(input) {
     if (input === 'left') {
-        this.x -= 20;
+        this.x -= this.step;
     } else if (input === 'up') {
-        this.y -= 20;
+        this.y -= this.jump;
     } else if (input === 'right') {
-        this.x += 20;
+        this.x += this.step;
     } else if (input === 'down') {
-        this.y += 20;
+        this.y += this.jump;
     }
 };
 
