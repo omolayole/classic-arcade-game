@@ -43,8 +43,16 @@ Player.prototype.render = function() {
 };
 
 // handleInput method
-Player.prototype.handleInput = function() {
-
+Player.prototype.handleInput = function(input) {
+    if (input === 'left') {
+        this.x -= 20;
+    } else if (input === 'up') {
+        this.y -= 20;
+    } else if (input === 'right') {
+        this.x += 20;
+    } else if (input === 'down') {
+        this.y += 20;
+    }
 };
 
 
