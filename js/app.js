@@ -53,13 +53,21 @@ Player.prototype.render = function() {
 // handleInput method
 Player.prototype.handleInput = function(input) {
     if (input === 'left') {
-        this.x -= this.step;
+        if (this.x > 0) {
+            this.x -= this.step;
+        }
     } else if (input === 'up') {
-        this.y -= this.jump;
+        if (this.y > 0) {
+            this.y -= this.jump;
+        }
     } else if (input === 'right') {
-        this.x += this.step;
+        if (this.x < this.step * 4) {
+            this.x += this.step;
+        }
     } else if (input === 'down') {
-        this.y += this.jump;
+        if (this.y < this.jump * 4) {
+            this.y += this.jump;
+        }
     }
 };
 
