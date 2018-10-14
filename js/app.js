@@ -20,7 +20,7 @@ Enemy.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
 
-    //if enemy has not pass boundary
+    //check enemy has not pass boundary
     if (this.x < this.step * 5) {
         // move forward
         // increment x by speed * dt
@@ -48,7 +48,7 @@ var Player = function() {
 
     //set specific starting location for the player
     this.startX = this.step * 2;
-    this.startY = (this.jump * 5) - 20;
+    this.startY = (this.jump * 4) + 62;
 
     //set initial location of the player
     this.x = this.startX;
@@ -57,7 +57,13 @@ var Player = function() {
 
 // update method
 Player.prototype.update = function() {
-
+    //check collision here
+    for(let enemy of allEnemies) {
+        // did player x and y collide with enemy?
+        if (this.y === enemy.y && (enemy.x + enemy.step/2 > this.x && enemy.x < this.x + this.step/2)) {
+            this.reset();
+        }
+    }
 }
 
 // render method
