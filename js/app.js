@@ -61,7 +61,7 @@ Player.prototype.update = function() {
     for(let enemy of allEnemies) {
         // did player x and y collide with enemy?
         if (this.y === enemy.y && (enemy.x + enemy.step/2 > this.x && enemy.x < this.x + this.step/2)) {
-            this.reset();
+            this.resetPlayer();
         }
     }
 }
@@ -91,6 +91,13 @@ Player.prototype.handleInput = function(input) {
         }
     }
 };
+
+// reset Player
+Player.prototype.resetPlayer = function() {
+    //set x and y to its initial location
+    this.x = this.startX;
+    this.y = this.startY;
+}
 
 
 // Now instantiate your objects.
