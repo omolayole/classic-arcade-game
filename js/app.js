@@ -3,7 +3,7 @@ var Enemy = function(x, y, speed) {
     
     //set position for the enemy
     this.x = x;
-    this.y = y + 62;
+    this.y = y + 55;
     this.speed = speed;
 
     // The image/sprite for our enemies, this uses
@@ -48,7 +48,7 @@ var Player = function() {
 
     //set specific starting location for the player
     this.startX = this.step * 2;
-    this.startY = (this.jump * 4) + 62;
+    this.startY = (this.jump * 4) + 55;
 
     //set initial location of the player
     this.x = this.startX;
@@ -63,6 +63,12 @@ Player.prototype.update = function() {
         if (this.y === enemy.y && (enemy.x + enemy.step/2 > this.x && enemy.x < this.x + this.step/2)) {
             this.resetPlayer();
         }
+    }
+
+    // check win here
+    if (this.y < 55) {
+        // when player reach the water
+        this.resetPlayer();
     }
 }
 
