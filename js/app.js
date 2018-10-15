@@ -1,3 +1,6 @@
+const scoreNumber = document.querySelector('#scoreNumber');
+scoreNumber.textContent = 0;
+
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
     
@@ -53,6 +56,9 @@ var Player = function() {
     //set initial location of the player
     this.x = this.startX;
     this.y = this.startY;
+
+    //set player initial score
+    this.num = 0;
 };
 
 // update method
@@ -68,6 +74,7 @@ Player.prototype.update = function() {
     // check win here
     if (this.y < 55) {
         // when player reach the water
+        scoreNumber.textContent = this.num++;
         this.resetPlayer();
     }
 }
