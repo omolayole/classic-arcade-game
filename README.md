@@ -1,4 +1,4 @@
-# Clasic Arcade Game Project
+# Classic Arcade Game Project
 
 ## Table of Contents
 
@@ -10,7 +10,7 @@
 
 In this game you have a Player and Enemies (bugs). The goal of the player is to reach the water, without colliding into any one of the enemies.
 
-The game is build with HTML, CSS and JavaScipt.
+The game is build with HTML, CSS and Object Oriented JavaScipt.
 
 ## How To Play The Game
 
@@ -25,6 +25,6 @@ player is return to its initial position.
 5. The score keep reducing as long as the player is hit by the bug before reaching the water. 
 
 ## Link
-To view live page, click [here]().
+To view live page, click [here](https://omolayole.github.io/classic-arcade-game/).
 
 
