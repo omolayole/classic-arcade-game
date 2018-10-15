@@ -65,8 +65,11 @@ var Player = function() {
 Player.prototype.update = function() {
     //check collision here
     for(let enemy of allEnemies) {
-        // did player x and y collide with enemy?
+        // when player x and y collide with enemy?
+        // decrement player's score
+        // and reset player to initial position
         if (this.y === enemy.y && (enemy.x + enemy.step/2 > this.x && enemy.x < this.x + this.step/2)) {
+            scoreNumber.textContent = this.num--;
             this.resetPlayer();
         }
     }
@@ -74,6 +77,8 @@ Player.prototype.update = function() {
     // check win here
     if (this.y < 55) {
         // when player reach the water
+        // increment player score
+        // and reset player to initial positon
         scoreNumber.textContent = this.num++;
         this.resetPlayer();
     }
