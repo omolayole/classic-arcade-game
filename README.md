@@ -5,6 +5,7 @@
 * About the Game
 * How To Play The Game
 * Link
+* Instructions on How to Download/Clone This Code and Run the Application Locally
 
 ## About the Game
 
