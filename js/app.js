@@ -69,7 +69,6 @@ Player.prototype.update = function() {
         // decrement player's score
         // and reset player to initial position
         if (this.y === enemy.y && (enemy.x + enemy.step/1.5 > this.x && enemy.x < this.x + this.step/1.5)) {
-            //alert('stop')
             scoreNumber.textContent = this.num--;
             this.resetPlayer();
         }
