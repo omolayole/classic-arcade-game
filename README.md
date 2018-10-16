@@ -27,4 +27,11 @@ player is return to its initial position.
 ## Link
 To view live page, click [here](https://omolayole.github.io/classic-arcade-game/).
 
+## Instructions on How to Download/Clone This Code and Run the Application Locally
 
+* download the zipped file of this project by clicking on 'download zip' when
+  you click on the 'download or clone' button under the repo name.
+* or clone this repo.
+* cd into the directory you want the cloned directory to be.
+* locate the index.html file in the project directory.
+* run the applicaton by opening the index file in a browser.
